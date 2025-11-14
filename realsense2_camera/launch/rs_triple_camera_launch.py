@@ -46,9 +46,9 @@ local_parameters = [{'name': 'camera_name1',       'default': 'cam_left',       
                     {'name': 'serial_no1',         'default': os.environ.get('REALSENSE_NO1', ''),     'description': 'camera1 serial number'},
                     {'name': 'serial_no2',         'default': os.environ.get('REALSENSE_NO2', ''),     'description': 'camera2 serial number'},
                     {'name': 'serial_no3',         'default': os.environ.get('REALSENSE_NO3', ''),    'description': 'camera3 serial number'},
-                    {'name': 'config_file1',        'default': "/home/realsense/vision-ws/src/realsense-ros/realsense2_camera/launch/config/multi_cam_config.yaml", 'description': 'camera1 yaml config file'},
-                    {'name': 'config_file2',        'default': "/home/realsense/vision-ws/src/realsense-ros/realsense2_camera/launch/config/multi_cam_config.yaml", 'description': 'camera2 yaml config file'},
-                    {'name': 'config_file3',        'default': "/home/realsense/vision-ws/src/realsense-ros/realsense2_camera/launch/config/multi_cam_config.yaml", 'description': 'camera3 yaml config file'},
+                    {'name': 'config_file1',        'default': "/home/realsense/vision_ws/src/realsense2_camera/launch/config/multi_cam_config.yml", 'description': 'camera1 yaml config file'},
+                    {'name': 'config_file2',        'default': "/home/realsense/vision_ws/src/realsense2_camera/launch/config/multi_cam_config.yml", 'description': 'camera2 yaml config file'},
+                    {'name': 'config_file3',        'default': "/home/realsense/vision_ws/src/realsense2_camera/launch/config/multi_cam_config.yml", 'description': 'camera3 yaml config file'},
                     # tf parameters for left & right cameras
                     {'name': 'tf.translation1.x',  'default': '0.08',             'description': 'x'},
                     {'name': 'tf.translation1.y',  'default': '0.0',              'description': 'y'},
@@ -65,7 +65,7 @@ local_parameters = [{'name': 'camera_name1',       'default': 'cam_left',       
                     ]
 
 def load_tf_config():
-    with open("/home/realsense/vision-ws/src/realsense-ros/realsense2_camera/launch/config/tf_config.yaml", 'r') as f:
+    with open("/home/realsense/vision_ws/src/realsense2_camera/launch/config/tf_config.yml", 'r') as f:
         return yaml.safe_load(f)
     
 def set_configurable_parameters(local_params):
