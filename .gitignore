@@ -6,3 +6,4 @@
 .idea/
 .vs/
 *.json
+!realsense2_camera/launch/visual_presets/*.json
